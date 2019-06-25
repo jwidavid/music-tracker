@@ -4,13 +4,22 @@
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
 */
 
 Route::get('/', function () {
+
+    $bands = [
+        ['name' => 'Glen Miller', 'albums' => 3],
+        ['name' => 'Frank Sinatra', 'albums' => 10],
+        ['name' => 'Mills Brothers', 'albums' => 4],
+        ['name' => 'Nat King Cole', 'albums' => 3]
+    ];
+    
+    return view('bands', [
+        'bands' => $bands
+    ]);
+});
+
+Route::get('/welcome', function () {
     return view('welcome');
 });
