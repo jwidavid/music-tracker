@@ -6,11 +6,12 @@ Bands
 
 @section('content_main')
 <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Music Tracker</h1>
+    <h1 class="display-4">Music Tracker @yield('title')</h1>
     <p class="lead">Quickly find the music that you're in the mood for from my personal library.</p>
 </div>
 
 <div class="container">
+    <span class="table-add float-right mb-3 mr-2"><a href="#" class="btn btn-success btn-rounded btn-sm my-0">Create New</a></span>
     <table class="table table-bordered table-responsive-md table-striped text-center">
         <thead>
         <tr>
