@@ -11,7 +11,9 @@ Bands
         <thead>
         <tr>
             <th class="text-center">Band</th>
-            <th class="text-center">Albums</th>
+            <th class="text-center">Started</th>
+            <th class="text-center">Website</th>
+            <th class="text-center">Active</th>
             <th class="text-center">Actions</th>
         </tr>
         </thead>
@@ -19,7 +21,9 @@ Bands
             @foreach($bands as $band)
             <tr>
                 <td contenteditable="true">{{ $band['name'] }}</td>
-                <td contenteditable="true">{{ $band['albums'] }}</td>
+                <td contenteditable="true">{{ $band['start_date'] }}</td>
+                <td contenteditable="true">{{ $band['website'] }}</td>
+                <td contenteditable="true">{{ $band['still_active'] ? 'Yes' : 'No' }}</td>
                 <td>
                     <span class="table-remove">
                         <button type="button" class="btn btn-info btn-rounded btn-sm my-0">Edit</button>

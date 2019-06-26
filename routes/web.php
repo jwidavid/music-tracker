@@ -1,22 +1,17 @@
 <?php
 
+use App\Band;
+use App\Album;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', function () {
-
-    $bands = [
-        ['name' => 'Glenn Miller', 'albums' => 2],
-        ['name' => 'Frank Sinatra', 'albums' => 3],
-        ['name' => 'Mills Brothers', 'albums' => 2],
-        ['name' => 'Nat King Cole', 'albums' => 1]
-    ];
-    
+Route::get('/', function () {   
     return view('bands', [
-        'bands' => $bands
+        'bands' => Band::all()
     ]);
 });
 
