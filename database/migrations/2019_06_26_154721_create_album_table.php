@@ -19,6 +19,7 @@ class CreateAlbumTable extends Migration
             $table->string('name');
             $table->date('recorded_date')->nullable();
             $table->date('release_date')->nullable();
+            $table->tinyInteger('number_of_tracks')->nullable()->unsigned();
             $table->string('label', 32)->nullable();
             $table->string('producer', 32)->nullable();
             $table->string('genre', 21)->nullable();
