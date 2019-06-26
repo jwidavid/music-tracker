@@ -26,15 +26,17 @@ Albums
                 <th class="text-center">Album</th>
                 <th class="text-center">Tracks</th>
                 <th class="text-center">Band</th>
+                <th class="text-center">Genre</th>
                 <th class="text-center">Actions</th>
             </tr>
             </thead>
             <tbody>
                 @foreach($albums as $album)
                 <tr>
-                    <td>{{ $album['title'] }}</td>
-                    <td>{{ $album['tracks'] }}</td>
-                    <td>{{ $album['band'] }}</td>
+                    <td>{{ $album['name'] }}</td>
+                    <td>{{ $album['number_of_tracks'] }}</td>
+                    <td>{{ $album->band->name }}</td>
+                    <td>{{ $album['genre'] }}</td>
                     <td>
                         <span class="table-remove">
                             <button type="button" class="btn btn-info btn-rounded btn-sm my-0">Edit</button>
