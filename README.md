@@ -7,33 +7,35 @@ DETAILS:
 
 2_ All database tables should be created via Laravel migrations. 
 
-3_ All database tables should be populated with example data via Laravel seed classes. Your application should consist of the following pages:
+3_ All database tables should be populated with example data via Laravel seed classes. 
+
+4_ Your application should consist of the following pages:
 - Band list page - List all bands (HOMEPAGE).
 - Album list page - List all albums. 
 
-4_ Include a "HTML select" field that contains all bands and can be used to filter the current list of Albums by Band. 
+5_ Include a "HTML select" field that contains all bands and can be used to filter the current list of Albums by Band. 
 
-5_ On both list pages, each item listed should contain edit and delete links.
+6_ On both list pages, each item listed should contain edit and delete links.
 
-6_ On both list pages, you should be able to sort the columns that are displaying by clicking on the column name. 
+7_ On both list pages, you should be able to sort the columns that are displaying by clicking on the column name. 
 
-7_ If you click the delete button on an album, the application should delete the album. 
+8_ If you click the delete button on an album, the application should delete the album. 
 
-8_ If you click the delete button on a band, the application should delete all albums that belong to that band and then it should delete the band. 
+9_ If you click the delete button on a band, the application should delete all albums that belong to that band and then it should delete the band. 
 
-9_ If you click the edit link for any list item you should be taken to an edit page for that item. There you should be able to edit any of the fields on the item. 
+10_ If you click the edit link for any list item you should be taken to an edit page for that item. There you should be able to edit any of the fields on the item. 
 
-10_ Use Laravel relationships to tie the band model to the album model and the album model to the band model. 
+11_ Use Laravel relationships to tie the band model to the album model and the album model to the band model. 
 
-11_ Use Laravel relationships to display the band name on album detail/edit page. 
+12_ Use Laravel relationships to display the band name on album detail/edit page. 
 
-12_ Use Laravel relationships to display the album names for a band on the band detail/edit page. 
+13_ Use Laravel relationships to display the album names for a band on the band detail/edit page. 
 
-13_ For the band create/edit page, “name” should be required. 
+14_ For the band create/edit page, “name” should be required. 
 
-14_ For the album create/edit page, you should have to select a band via a select box which should be required. The “name” field should also be required. 
+15_ For the album create/edit page, you should have to select a band via a select box which should be required. The “name” field should also be required. 
 
-15_ Band table should have at least the following fields: 
+16_ Band table should have at least the following fields: 
 - name 
 - start_date 
 - website 
