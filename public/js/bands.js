@@ -1,0 +1,1 @@
+$('#tableBands').DataTable();
