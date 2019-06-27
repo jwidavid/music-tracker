@@ -7,7 +7,7 @@ DETAILS:
 
 2_ All database tables should be created via Laravel migrations. **DONE**
 
-3_ All database tables should be populated with example data via Laravel seed classes.
+3_ All database tables should be populated with example data via Laravel seed classes. **DONE**
 
 4_ Your application should consist of the following pages: **DONE**
 - Band list page - List all bands (HOMEPAGE).

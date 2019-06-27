@@ -18,7 +18,7 @@ class CreateBandTable extends Migration
             $table->string('name', 32);
             $table->date('start_date')->nullable();
             $table->string('website')->nullable();
-            $table->boolean('still_active')->nullable();
+            $table->boolean('still_active')->default('0');
             $table->timestamps();
         });
     }
