@@ -11,8 +11,7 @@ use App\Album;
 |--------------------------------------------------------------------------
 */
 
-Route::view('/', 'welcome');
-
+Route::get('/', 'BandsController@index');
 Route::get('/bands', 'BandsController@index');
 Route::get('/band/{band?}', 'BandsController@edit');
 Route::post('/band/{band}', 'BandsController@edit');
