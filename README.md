@@ -19,9 +19,9 @@ DETAILS:
 
 7_ On both list pages, you should be able to sort the columns that are displaying by clicking on the column name. 
 
-8_ If you click the delete button on an album, the application should delete the album. 
+8_ If you click the delete button on an album, the application should delete the album. **DONE**
 
-9_ If you click the delete button on a band, the application should delete all albums that belong to that band and then it should delete the band. 
+9_ If you click the delete button on a band, the application should delete all albums that belong to that band and then it should delete the band. **DONE**
 
 10_ If you click the edit link for any list item you should be taken to an edit page for that item. There you should be able to edit any of the fields on the item. **DONE**
 
