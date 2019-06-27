@@ -34,7 +34,12 @@ Quickly find the music that you're in the mood for from my personal library.
                 <td>
                     <span class="table-remove">
                         <a href="/band/{{ $band->id }}" class="btn btn-info btn-rounded btn-sm my-0">Edit</a>
-                        <a href="" class="btn btn-danger btn-rounded btn-sm my-0">Delete</a>
+                        
+                        <form method="post" action="/band/{{ $band->id }}/delete" class="d-inline">
+                            @method('delete')
+                            @csrf
+                            <button type="submit" class="btn btn-danger btn-rounded btn-sm my-0">Delete</button>
+                        </form>
                     </span>
                 </td>
             </tr>
