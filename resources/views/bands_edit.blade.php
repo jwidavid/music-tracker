@@ -19,8 +19,8 @@ Band Details
         </div>
         @endif
 
-        @if (isset($id))
-        <form method="POST" action="/band/{{ $id }}">
+        @if (isset($details->id))
+        <form method="POST" action="/band/{{ $details->id }}">
         @else
         <form method="POST" action="/band">
         @endif

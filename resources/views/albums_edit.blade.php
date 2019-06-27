@@ -2,13 +2,19 @@
 
 
 @section('title')
-Album Details
+    @if (isset($details->name))
+        Album Details
+    @else
+        Create New Album
+    @endif
 @endsection
 
 
 @section('pageHeading')
-{{ $details->name }} <small>[by {{ $details->band->name }}]</small>
-@endsection
+    @if (isset($details->name))
+        {{ $details->name }} <small>[by {{ $details->band->name }}]</small>
+    @endif
+@endsection 
 
 
 @section('content_main')
