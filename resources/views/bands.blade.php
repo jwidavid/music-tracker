@@ -1,12 +1,14 @@
 @extends('base')
 
+
 @section('title')
 Bands
 @endsection
 
+
 @section('content_main')
 <div class="container">
-    <span class="table-add float-right mb-3 mr-2"><a href="#" class="btn btn-success btn-rounded btn-sm my-0">Create New</a></span>
+    <span class="table-add float-right mb-3 mr-2"><a href="/band" class="btn btn-success btn-rounded btn-sm my-0">Create New</a></span>
     <table class="table table-bordered table-responsive-md table-striped text-center">
         <thead>
         <tr>
@@ -26,8 +28,8 @@ Bands
                 <td contenteditable="true">{{ $band['still_active'] ? 'Yes' : 'No' }}</td>
                 <td>
                     <span class="table-remove">
-                        <button type="button" class="btn btn-info btn-rounded btn-sm my-0">Edit</button>
-                        <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Delete</button>
+                        <a href="/band/{{ $band->id }}" class="btn btn-info btn-rounded btn-sm my-0">Edit</a>
+                        <a href="" class="btn btn-danger btn-rounded btn-sm my-0">Delete</a>
                     </span>
                 </td>
             </tr>
