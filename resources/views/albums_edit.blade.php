@@ -17,7 +17,11 @@ Album Details
 </div>
 @endif
 
+@if (isset($id))
 <form method="POST" action="/album/{{ $id }}">
+@else
+<form method="POST" action="/album">
+@endif
 
     @csrf
 

@@ -1,12 +1,10 @@
 @extends('base')
 
+
 @section('title')
 Albums
 @endsection
 
-@section('headerContent')
-<link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-@endsection
 
 @section('content_main')
 <div class="container">
@@ -19,7 +17,7 @@ Albums
                 @endforeach
             </select>
         </div>
-        <span class="table-add float-right mb-3 mr-2"><a href="#" class="btn btn-success btn-rounded btn-sm my-0">Create New</a></span>
+        <span class="table-add float-right mb-3 mr-2"><a href="/album" class="btn btn-success btn-rounded btn-sm my-0">Create New</a></span>
         <table class="table table-bordered table-responsive-md table-striped text-center">
             <thead>
             <tr>
@@ -39,8 +37,8 @@ Albums
                     <td>{{ $album['genre'] }}</td>
                     <td>
                         <span class="table-remove">
-                            <button type="button" class="btn btn-info btn-rounded btn-sm my-0">Edit</button>
-                            <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Delete</button>
+                            <a href="/album/{{ $album->id }}" class="btn btn-info btn-rounded btn-sm my-0">Edit</a>
+                            <a href="" class="btn btn-danger btn-rounded btn-sm my-0">Delete</a>
                         </span>
                     </td>
                 </tr>
