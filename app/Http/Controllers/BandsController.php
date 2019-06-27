@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 use App\Band;
 use App\Album;
-use Illuminate\Http\Request;
 
 class BandsController extends Controller
 {
@@ -53,9 +54,7 @@ class BandsController extends Controller
      */
     public function store()
     {
-        $band = new Band();
-        $band->name = 'A Band';
-        $band->save();
+        Band::create(request()->all());
         return redirect('/bands')->with('success', 'You created a new band!');
     }
 
