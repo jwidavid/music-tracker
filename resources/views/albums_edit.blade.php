@@ -6,6 +6,11 @@ Album Details
 @endsection
 
 
+@section('pageHeading')
+{{ $details->name }} <small>[by {{ $details->band->name }}]</small>
+@endsection
+
+
 @section('content_main')
 
 @if (session('error'))

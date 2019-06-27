@@ -6,6 +6,11 @@ Bands
 @endsection
 
 
+@section('pageHeading')
+Quickly find the music that you're in the mood for from my personal library.
+@endsection
+
+
 @section('content_main')
 <div class="container">
     <span class="table-add float-right mb-3 mr-2"><a href="/band" class="btn btn-success btn-rounded btn-sm my-0">Create New</a></span>

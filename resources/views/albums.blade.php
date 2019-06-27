@@ -6,6 +6,11 @@ Albums
 @endsection
 
 
+@section('pageHeading')
+Quickly find the music that you're in the mood for from my personal library.
+@endsection
+
+
 @section('content_main')
 <div class="container">
     <div id="table" class="table-editable">

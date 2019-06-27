@@ -20,8 +20,8 @@
     </div>
 
     <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 class="display-4">Music Tracker @yield('title')</h1>
-        <p class="lead">Quickly find the music that you're in the mood for from my personal library.</p>
+        <h1 class="display-4">@yield('title')</h1>
+        <p class="lead">@yield('pageHeading')</p>
     </div>
     <br>
 
