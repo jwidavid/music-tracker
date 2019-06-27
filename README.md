@@ -23,7 +23,7 @@ DETAILS:
 
 9_ If you click the delete button on a band, the application should delete all albums that belong to that band and then it should delete the band. 
 
-10_ If you click the edit link for any list item you should be taken to an edit page for that item. There you should be able to edit any of the fields on the item. 
+10_ If you click the edit link for any list item you should be taken to an edit page for that item. There you should be able to edit any of the fields on the item. **DONE**
 
 11_ Use Laravel relationships to tie the band model to the album model and the album model to the band model. **DONE**
 
@@ -31,9 +31,9 @@ DETAILS:
 
 13_ Use Laravel relationships to display the album names for a band on the band detail/edit page.
 
-14_ For the band create/edit page, “name” should be required.
+14_ For the band create/edit page, “name” should be required. **DONE**
 
-15_ For the album create/edit page, you should have to select a band via a select box which should be required. The “name” field should also be required.
+15_ For the album create/edit page, you should have to select a band via a select box which should be required. The “name” field should also be required. **DONE**
 
 16_ Band table should have at least the following fields: **DONE**
 - name 
