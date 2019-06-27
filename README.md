@@ -13,11 +13,11 @@ DETAILS:
 - Band list page - List all bands (HOMEPAGE).
 - Album list page - List all albums. 
 
-5_ Include a "HTML select" field that contains all bands and can be used to filter the current list of Albums by Band.
+5_ Include a "HTML select" field that contains all bands and can be used to filter the current list of Albums by Band. **DONE**
 
 6_ On both list pages, each item listed should contain edit and delete links. **DONE**
 
-7_ On both list pages, you should be able to sort the columns that are displaying by clicking on the column name. 
+7_ On both list pages, you should be able to sort the columns that are displaying by clicking on the column name. **DONE**
 
 8_ If you click the delete button on an album, the application should delete the album. **DONE**
 
