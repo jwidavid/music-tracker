@@ -4,7 +4,7 @@
 Albums
 @endsection
 
-@section('header')
+@section('headerContent')
 <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 @endsection
 
