@@ -27,7 +27,7 @@ DETAILS:
 
 11_ Use Laravel relationships to tie the band model to the album model and the album model to the band model. **DONE**
 
-12_ Use Laravel relationships to display the band name on album detail/edit page. 
+12_ Use Laravel relationships to display the band name on album detail/edit page. **DONE**
 
 13_ Use Laravel relationships to display the album names for a band on the band detail/edit page. **DONE**
 
