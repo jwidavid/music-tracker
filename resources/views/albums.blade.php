@@ -6,6 +6,11 @@ Albums
 @endsection
 
 
+@section('footerContent')
+<script src="/js/sorting.js"></script>
+@endsection
+
+
 @section('pageHeading')
 Quickly find the music that you're in the mood for from my personal library.
 @endsection
@@ -23,14 +28,14 @@ Quickly find the music that you're in the mood for from my personal library.
             </select>
         </div>
         <span class="table-add float-right mb-3 mr-2"><a href="/album" class="btn btn-success btn-rounded btn-sm my-0">Create New</a></span>
-        <table class="table table-bordered table-responsive-md table-striped text-center">
+        <table id="sortable" class="table table-bordered table-responsive-md table-striped text-center">
             <thead>
             <tr>
-                <th class="text-center">Album</th>
-                <th class="text-center">Tracks</th>
-                <th class="text-center">Band</th>
-                <th class="text-center">Genre</th>
-                <th class="text-center">Actions</th>
+                <th>Album</th>
+                <th>Tracks</th>
+                <th>Band</th>
+                <th>Genre</th>
+                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
