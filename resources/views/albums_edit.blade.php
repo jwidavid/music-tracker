@@ -28,8 +28,8 @@
 </div>
 @endif
 
-@if (isset($id))
-<form method="POST" action="/album/{{ $id }}">
+@if (isset($details->id))
+<form method="POST" action="/album/{{ $details->id }}">
 @else
 <form method="POST" action="/album">
 @endif
