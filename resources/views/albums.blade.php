@@ -20,8 +20,9 @@ Quickly find the music that you're in the mood for from my personal library.
 <div class="container">
     <div id="table" class="table-editable">
         <div class="table-add float-left">
-            <label for="testing"><b>Filter by Band</b></label>
-            <select id="testing">
+            <label for="bandFilter"><b>Filter by Band</b></label>
+            <select id="bandFilter">
+                <option></option>
                 @foreach($bands as $band)
                     <option>{{ $band['name'] }}</option>
                 @endforeach
