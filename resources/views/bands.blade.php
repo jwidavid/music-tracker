@@ -6,6 +6,11 @@ Bands
 @endsection
 
 
+@section('footerContent')
+<script src="/js/sorting.js"></script>
+@endsection
+
+
 @section('pageHeading')
 Quickly find the music that you're in the mood for from my personal library.
 @endsection
@@ -14,14 +19,14 @@ Quickly find the music that you're in the mood for from my personal library.
 @section('content_main')
 <div class="container">
     <span class="table-add float-right mb-3 mr-2"><a href="/band" class="btn btn-success btn-rounded btn-sm my-0">Create New</a></span>
-    <table class="table table-bordered table-responsive-md table-striped text-center">
+    <table id="sortable" class="table table-bordered table-responsive-md table-striped text-center">
         <thead>
         <tr>
-            <th class="text-center">Band</th>
-            <th class="text-center">Started</th>
-            <th class="text-center">Website</th>
-            <th class="text-center">Active</th>
-            <th class="text-center">Actions</th>
+            <th>Band</th>
+            <th>Started</th>
+            <th>Website</th>
+            <th>Active</th>
+            <th>Actions</th>
         </tr>
         </thead>
         <tbody>
