@@ -30,6 +30,10 @@ function isSorted(arr) {
     for (let i=0; i<arr.length-1; i++) {
         let var1 = $(arr[i]).children()[colIndex].innerText;
         let var2 = $(arr[i+1]).children()[colIndex].innerText;
+        if (!isNaN(var1) && !isNaN(var2)) {
+            var1 = Number(var1);
+            var2 = Number(var2);
+        }
         if (var1 > var2) {
             return false;
         }
@@ -62,13 +66,19 @@ function mergeSort(arr) {
     let indexRight = 0
   
     while (indexLeft < left.length && indexRight < right.length) {
-        let var1 = $(left[indexLeft]).children()[colIndex];
-        let var2 = $(right[indexRight]).children()[colIndex];
+        let var1 = $(left[indexLeft]).children()[colIndex].innerText;
+        let var2 = $(right[indexRight]).children()[colIndex].innerText;
 
-        if (var1.innerText < var2.innerText) {
+        if (!isNaN(var1) && !isNaN(var2)) {
+            var1 = Number(var1);
+            var2 = Number(var2);
+        }
+
+        if (var1 < var2) {
             result.push(left[indexLeft])
             indexLeft++
-        } else {
+        } 
+        else {
             result.push(right[indexRight])
             indexRight++
         }
