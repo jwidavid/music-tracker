@@ -79,6 +79,6 @@ class BandsController extends Controller
     public function destroy(Band $band)
     {
         $band->delete();
-        return redirect('/bands')->withSuccessMessage('You removed a band');
+        return redirect('/bands')->withSuccessMessage('You removed a band and all corresponding albums');
     }
 }
