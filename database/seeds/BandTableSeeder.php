@@ -1,5 +1,6 @@
 <?php
 
+use App\Band;
 use Illuminate\Database\Seeder;
 
 class BandTableSeeder extends Seeder
@@ -13,8 +14,11 @@ class BandTableSeeder extends Seeder
     {
         DB::table('Band')->delete();
 
-        factory(App\Band::class, 5)->create()->each(function ($band) {
-            $band->save();
+        factory(Band::class, 5)->create()->each(function ($band) {
+            $albums = factory(App\Album::class, rand(1, 4))->make(['band_id'=>$band->id]);
+            for ($i=0; $i<count($albums); $i++) {
+                $band->albums()->save($albums[$i]);
+            }
         });
         
         // DB::table('band')->insert([

@@ -2,12 +2,12 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
+use App\Band;
 use Faker\Generator as Faker;
 
-
-$factory->define(App\Band::class, function (Faker $faker) {    
+$factory->define(Band::class, function (Faker $faker) {    
     return [
-        'name' => $faker->unique()->words($nb=3, $asText=true),
+        'name' => $faker->unique()->words($nb=rand(2, 3), $asText=true),
         'start_date' => $faker->date($format='Y-m-d', $max='now'),
         'website' => $faker->unique()->url,
         'still_active' => $faker->boolean
