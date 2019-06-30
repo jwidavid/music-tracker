@@ -28,21 +28,21 @@ Band Details
             @csrf
             <div class="form-group">
                 <label for="name">Band Name *</label>
-                <input type="text" value="{{ $details->name }}" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" name="name" placeholder="Enter Band Name" required>
+                <input type="text" value="{{ old('name', $details->name) }}" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" name="name" placeholder="Enter Band Name" required>
             </div>
             <div class="form-group">
                 <label for="start_date">Start Date</label>
-                <input type="date" value="{{ $details->start_date }}" class="form-control {{ $errors->has('start_date') ? 'is-invalid' : '' }}" name="start_date" placeholder="Enter Start Date">
+                <input type="date" value="{{ old('start_date', $details->start_date) }}" class="form-control {{ $errors->has('start_date') ? 'is-invalid' : '' }}" name="start_date" placeholder="Enter Start Date">
             </div>
             <div class="form-group">
                 <label for="website">Website</label>
-                <input type="url" value="{{ $details->website }}" class="form-control {{ $errors->has('website') ? 'is-invalid' : '' }}" name="website" placeholder="Eg. http://www.some-website.com">
+                <input type="url" value="{{ old('website', $details->website) }}" class="form-control {{ $errors->has('website') ? 'is-invalid' : '' }}" name="website" placeholder="Eg. http://www.some-website.com">
             </div>
             <div class="form-group">
-                <label for="still_active">Active</label>
+                <label for="still_active">Active</label>{{ old('recorded_date', $details->recorded_date) }}
                 <select name="still_active" class="form-control" required>
-                    <option value="0" @if ($details->still_active == '0') {{ 'selected' }} @endif>No</option>
-                    <option value="1" @if ($details->still_active == '1') {{ 'selected' }} @endif>Yes</option>
+                    <option value="0">No</option>
+                    <option value="1" @if (in_array(1, [old('still_active'), $details->still_active])) {{ 'selected' }} @endif>Yes</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>

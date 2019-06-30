@@ -43,7 +43,17 @@ class AlbumsController extends Controller
      */
     public function update(Album $album)
     {
-        $album->update(request()->all());
+        $album->update(request()->validate([
+            'name' => 'bail|required|max:255',
+            'band_id' => 'required|integer',
+            'recorded_date' => 'nullable|date|before:today',
+            'release_date' => 'nullable|date|before:today',
+            'number_of_tracks' => 'nullable|integer',
+            'label' => 'nullable|max:32',
+            'producer' => 'nullable|max:32',
+            'genre' => 'nullable|max:21'
+
+        ]));
         $album->save();
         return redirect('/albums')->withSuccessMessage('You updated the album');
     }
@@ -55,7 +65,17 @@ class AlbumsController extends Controller
      */
     public function store()
     {
-        Album::create(request()->all());
+        Album::create(request()->validate([
+            'name' => 'bail|required|max:255',
+            'band_id' => 'required|integer',
+            'recorded_date' => 'nullable|before:today',
+            'release_date' => 'nullable|before:today',
+            'number_of_tracks' => 'nullable|integer',
+            'label' => 'nullable|max:32',
+            'producer' => 'nullable|max:32',
+            'genre' => 'nullable|max:21'
+
+        ]));
         return redirect('/albums')->withSuccessMessage('You created a new album');
     }
 

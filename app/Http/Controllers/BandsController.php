@@ -43,8 +43,8 @@ class BandsController extends Controller
     public function update(Band $band)
     {
         $band->update(request()->validate([
-            'name' => 'bail|required|min:1|max:50',
-            'start_date' => 'nullable|date',
+            'name' => 'bail|required|max:50',
+            'start_date' => 'nullable|date|before:today',
             'website' => 'nullable|url|max:255',
             'still_active' => 'boolean'
 
