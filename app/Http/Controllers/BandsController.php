@@ -44,7 +44,7 @@ class BandsController extends Controller
     {
         $band->update(request()->all());
         $band->save();
-        return redirect('/bands')->withSuccessMessage('You updated the band!');
+        return redirect('/bands')->withSuccessMessage('You updated the band');
     }
 
     /**
@@ -55,7 +55,7 @@ class BandsController extends Controller
     public function store()
     {
         Band::create(request()->all());
-        return redirect('/bands')->withSuccessMessage('You created a new band!');
+        return redirect('/bands')->withSuccessMessage('You created a new band');
     }
 
     /**
@@ -67,6 +67,6 @@ class BandsController extends Controller
     public function destroy(Band $band)
     {
         $band->delete();
-        return redirect('/bands')->withSuccessMessage('You removed a band!');
+        return redirect('/bands')->withSuccessMessage('You removed a band');
     }
 }
