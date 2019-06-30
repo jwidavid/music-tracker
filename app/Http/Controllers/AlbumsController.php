@@ -48,7 +48,7 @@ class AlbumsController extends Controller
             'band_id' => 'required|integer',
             'recorded_date' => 'nullable|date|before:today',
             'release_date' => 'nullable|date|before:today',
-            'number_of_tracks' => 'nullable|integer',
+            'number_of_tracks' => 'nullable|integer|max:50',
             'label' => 'nullable|max:32',
             'producer' => 'nullable|max:32',
             'genre' => 'nullable|max:21'

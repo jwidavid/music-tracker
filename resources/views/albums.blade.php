@@ -33,7 +33,9 @@ Quickly find the music that you're in the mood for from my personal library.
         <tr>
             <th>Album</th>
             <th>Tracks</th>
-            <th>Band</th>
+            <th class="d-none">Band</th>
+            <th>Release Date</th>
+            <th>Label</th>
             <th>Genre</th>
             <th>Actions</th>
         </tr>
@@ -43,7 +45,9 @@ Quickly find the music that you're in the mood for from my personal library.
             <tr>
                 <td>{{ $album['name'] }}</td>
                 <td>{{ $album['number_of_tracks'] }}</td>
-                <td>{{ $album->band->name }}</td>
+                <td class="d-none">{{ $album->band->name }}</td>
+                <td>{{ $album->release_date }}</td>
+                <td>{{ $album->label }}</td>
                 <td>{{ $album['genre'] }}</td>
                 <td>
                     <span class="table-remove">
