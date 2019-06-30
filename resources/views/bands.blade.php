@@ -33,10 +33,10 @@ Quickly find the music that you're in the mood for from my personal library.
             @foreach($bands as $band)
             <tr>
                 <td>{{ $band['name'] }}</td>
-                <td>{{ $band['start_date'] }}</td>
+                <td style="min-width:120px;">{{ $band['start_date'] }}</td>
                 <td>{{ $band['website'] }}</td>
                 <td>{{ $band['still_active'] ? 'Yes' : 'No' }}</td>
-                <td>
+                <td style="min-width:150px;">
                     <span class="table-remove">
                         <a href="/band/{{ $band->id }}" class="btn btn-info btn-rounded btn-sm my-0">Edit</a>
                         <form method="post" action="/band/{{ $band->id }}/delete" class="d-inline">
