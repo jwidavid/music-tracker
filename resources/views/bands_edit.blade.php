@@ -28,7 +28,7 @@ Band Details
             @csrf
             <div class="form-group">
                 <label for="name">Band Name *</label>
-                <input type="text" value="{{ old('name', $details->name) }}" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" name="name" placeholder="Enter Band Name" required>
+                <input type="text" value="{{ old('name', $details->name) }}" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" name="name" placeholder="Enter Band Name" required maxlength="50">
             </div>
             <div class="form-group">
                 <label for="start_date">Start Date</label>
@@ -36,7 +36,7 @@ Band Details
             </div>
             <div class="form-group">
                 <label for="website">Website</label>
-                <input type="url" value="{{ old('website', $details->website) }}" class="form-control {{ $errors->has('website') ? 'is-invalid' : '' }}" name="website" placeholder="Eg. http://www.some-website.com">
+                <input type="url" value="{{ old('website', $details->website) }}" class="form-control {{ $errors->has('website') ? 'is-invalid' : '' }}" name="website" placeholder="Eg. http://www.some-website.com" maxlength="255">
             </div>
             <div class="form-group">
                 <label for="still_active">Active</label>{{ old('recorded_date', $details->recorded_date) }}
