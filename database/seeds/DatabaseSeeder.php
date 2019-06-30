@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             BandTableSeeder::class,
-            AlbumTableSeeder::class
+            //AlbumTableSeeder::class
         ]);
     }
 }
