@@ -26,6 +26,7 @@
     <br>
 
     <div class="container">
+        @includeWhen(session()->has('flash.message'), 'messages')
         @yield('content_main')
     </div>
 

@@ -17,38 +17,36 @@ Quickly find the music that you're in the mood for from my personal library.
 
 
 @section('content_main')
-<div class="container">
-    <span class="table-add float-right mb-3 mr-2"><a href="/band" class="btn btn-success btn-rounded btn-sm my-0">Create New</a></span>
-    <table id="sortable" class="table table-bordered table-responsive-md table-striped text-center">
-        <thead>
+<span class="table-add float-right mb-3 mr-2"><a href="/band" class="btn btn-success btn-rounded btn-sm my-0">Create New</a></span>
+<table id="sortable" class="table table-bordered table-responsive-md table-striped text-center">
+    <thead>
+    <tr>
+        <th>Band</th>
+        <th>Started</th>
+        <th>Website</th>
+        <th>Active</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach($bands as $band)
         <tr>
-            <th>Band</th>
-            <th>Started</th>
-            <th>Website</th>
-            <th>Active</th>
-            <th>Actions</th>
+            <td>{{ $band['name'] }}</td>
+            <td style="min-width:120px;">{{ $band['start_date'] }}</td>
+            <td>{{ $band['website'] }}</td>
+            <td>{{ $band['still_active'] ? 'Yes' : 'No' }}</td>
+            <td style="min-width:150px;">
+                <span class="table-remove">
+                    <a href="/band/{{ $band->id }}" class="btn btn-info btn-rounded btn-sm my-0">Edit</a>
+                    <form method="post" action="/band/{{ $band->id }}/delete" class="d-inline">
+                        @method('delete')
+                        @csrf
+                        <button type="submit" class="btn btn-danger btn-rounded btn-sm my-0">Delete</button>
+                    </form>
+                </span>
+            </td>
         </tr>
-        </thead>
-        <tbody>
-            @foreach($bands as $band)
-            <tr>
-                <td>{{ $band['name'] }}</td>
-                <td style="min-width:120px;">{{ $band['start_date'] }}</td>
-                <td>{{ $band['website'] }}</td>
-                <td>{{ $band['still_active'] ? 'Yes' : 'No' }}</td>
-                <td style="min-width:150px;">
-                    <span class="table-remove">
-                        <a href="/band/{{ $band->id }}" class="btn btn-info btn-rounded btn-sm my-0">Edit</a>
-                        <form method="post" action="/band/{{ $band->id }}/delete" class="d-inline">
-                            @method('delete')
-                            @csrf
-                            <button type="submit" class="btn btn-danger btn-rounded btn-sm my-0">Delete</button>
-                        </form>
-                    </span>
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
-</div>
+        @endforeach
+    </tbody>
+</table>
 @endsection

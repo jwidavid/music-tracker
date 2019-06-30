@@ -14,7 +14,7 @@ use App\Album;
 Route::get('/', 'BandsController@index');
 Route::get('/bands', 'BandsController@index');
 Route::get('/band/{band?}', 'BandsController@edit');
-Route::post('/band/{band}', 'BandsController@edit');
+Route::post('/band/{band}', 'BandsController@update');
 Route::post('/band', 'BandsController@store');
 Route::delete('/band/{band}/delete', 'BandsController@destroy');
 

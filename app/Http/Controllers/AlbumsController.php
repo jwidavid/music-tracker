@@ -45,7 +45,7 @@ class AlbumsController extends Controller
     {
         $album->update(request()->all());
         $album->save();
-        return redirect('/albums')->with('success', 'You updated the album!');
+        return redirect('/albums')->withSuccessMessage('You updated the album!');
     }
 
     /**
@@ -56,7 +56,7 @@ class AlbumsController extends Controller
     public function store()
     {
         Album::create(request()->all());
-        return redirect('/albums')->with('success', 'You created a new album!');
+        return redirect('/albums')->withSuccessMessage('You created a new album!');
     }
 
     /**
@@ -68,6 +68,6 @@ class AlbumsController extends Controller
     public function destroy(Album $album)
     {
         $album->delete();
-        return redirect('/albums')->with('success', 'You removed a band.');
+        return redirect('/albums')->withSuccessMessage('You removed an album.');;
     }
 }
