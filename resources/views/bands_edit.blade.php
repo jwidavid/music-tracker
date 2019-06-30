@@ -8,6 +8,15 @@ Band Details
 
 @section('content_main')
 
+@if ($errors->any())
+<div class="alert alert-danger alert-dismissible fade show mb-5" role="alert">
+    {{ $errors->first() }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+@endif
+
 <div class="row">
     <div class="col-sm-8">
 
@@ -16,24 +25,22 @@ Band Details
         @else
         <form method="POST" action="/band">
         @endif
-
             @csrf
-
             <div class="form-group">
-                <label for="band_name">Band Name *</label>
-                <input type="text" value="{{ $details->name }}" class="form-control" id="band_name" name="name" placeholder="Enter Band Name" required>
+                <label for="name">Band Name *</label>
+                <input type="text" value="{{ $details->name }}" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" name="name" placeholder="Enter Band Name" required>
             </div>
             <div class="form-group">
-                <label for="band_date_start">Start Date</label>
-                <input type="date" value="{{ $details->start_date }}" class="form-control" id="band_date_start" name="start_date" placeholder="Enter Start Date">
+                <label for="start_date">Start Date</label>
+                <input type="date" value="{{ $details->start_date }}" class="form-control {{ $errors->has('start_date') ? 'is-invalid' : '' }}" name="start_date" placeholder="Enter Start Date">
             </div>
             <div class="form-group">
-                <label for="band_website">Website</label>
-                <input type="url" value="{{ $details->website }}" class="form-control" id="band_website" name="website" placeholder="Eg. http://www.some-website.com">
+                <label for="website">Website</label>
+                <input type="url" value="{{ $details->website }}" class="form-control {{ $errors->has('website') ? 'is-invalid' : '' }}" name="website" placeholder="Eg. http://www.some-website.com">
             </div>
             <div class="form-group">
-                <label for="band_active">Active</label>
-                <select id="band_active" name="still_active" class="form-control" required>
+                <label for="still_active">Active</label>
+                <select name="still_active" class="form-control" required>
                     <option value="0" @if ($details->still_active == '0') {{ 'selected' }} @endif>No</option>
                     <option value="1" @if ($details->still_active == '1') {{ 'selected' }} @endif>Yes</option>
                 </select>
@@ -46,7 +53,7 @@ Band Details
         <div class="card card-body bg-light">
             <ul class="list-unstyled">
             @foreach($details->albums as $album)
-                <li>{{ $album->name }}</li>
+                <li>{{ $loop->iteration }}) {{ $album->name }}</li>
             @endforeach
             </ul>
         </div>

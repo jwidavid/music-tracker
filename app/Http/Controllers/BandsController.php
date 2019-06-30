@@ -42,7 +42,13 @@ class BandsController extends Controller
      */
     public function update(Band $band)
     {
-        $band->update(request()->all());
+        $band->update(request()->validate([
+            'name' => 'bail|required|min:1|max:50',
+            'start_date' => 'nullable|date',
+            'website' => 'nullable|url|max:255',
+            'still_active' => 'boolean'
+
+        ]));
         $band->save();
         return redirect('/bands')->withSuccessMessage('You updated the band');
     }
@@ -54,7 +60,13 @@ class BandsController extends Controller
      */
     public function store()
     {
-        Band::create(request()->all());
+        Band::create(request()->validate([
+            'name' => 'bail|required|min:1|max:50',
+            'start_date' => 'nullable|date',
+            'website' => 'nullable|url|max:255',
+            'still_active' => 'boolean'
+
+        ]));
         return redirect('/bands')->withSuccessMessage('You created a new band');
     }
 
