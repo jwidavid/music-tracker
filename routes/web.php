@@ -2,9 +2,6 @@
 
 use Illuminate\Http\Request;
 
-use App\Band;
-use App\Album;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
